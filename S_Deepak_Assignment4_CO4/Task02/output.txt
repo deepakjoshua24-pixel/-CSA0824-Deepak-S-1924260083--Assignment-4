@@ -1,0 +1,14 @@
+Daily files: 4
+MODEL: counts[register] = [present_days, absent_days]; malformed rows -> (file, line, reason).
+PSEUDOCODE: for each sorted daily file: open UTF-8; for each line: skip blank; split; validate fields/date/status; update one count; otherwise record reject. Then calculate each percentage and write both reports.
+TRACE: 192311001,2026-10-01,P -> counts[192311001] = [1, 0]; damaged line -> reject, counts unchanged.
+Register | Present | Absent | Valid days | Attendance | Below 75%
+192311001 | 1 | 3 | 4 | 25.0% | YES
+192311002 | 3 | 1 | 4 | 75.0% | no
+192311003 | 2 | 2 | 4 | 50.0% | YES
+Rejected damaged rows: 2
+2026-10-03.csv:4: expected 3 fields, found 2
+2026-10-04.csv:4: invalid status 'L'
+Reports: attendance_summary.csv, below_75_percent.csv, rejected_lines.txt
+Complexity: S students, f files, l total lines -> O(l + S log S) time; O(S + r) memory for counts and r rejects.
+Alternative per-student rereading: O(S*f*l) time; O(1) count space per student (plus report output).

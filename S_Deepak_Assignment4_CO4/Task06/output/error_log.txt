@@ -1,0 +1,4 @@
+ece.txt:2: invalid email 'diya_at_campus.edu'
+me.txt:2: expected 5 fields, found 1
+cse.txt:3: duplicate register 192311001
+eee.txt: missing file

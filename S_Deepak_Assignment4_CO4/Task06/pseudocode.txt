@@ -1,0 +1,20 @@
+SIMATS ENGINEERING - STANDARD ALGORITHMIC PSEUDOCODE
+
+ALGORITHM ProcessFestivalRegistrations(folder, expected_files)
+    master <- empty list; seen_registers <- empty set
+    event_map <- empty map; error_log <- empty list
+    FOR EACH filename IN expected_files DO
+        IF file does not exist THEN record missing-file error; CONTINUE
+        OPEN file with UTF-8 and automatic closing
+        FOR EACH line with line number DO
+            IF line is blank THEN CONTINUE
+            TRY parse exactly five CSV fields; split final events field on semicolons
+            CATCH file/encoding/CSV error; add file and line to error log; CONTINUE
+            VALIDATE required fields and email using string operations
+            IF invalid THEN add reason to error log; CONTINUE
+            IF register already in seen_registers THEN record duplicate; CONTINUE
+            ADD register to seen_registers; append record to master
+            FOR EACH selected event DO append record to event_map[event]
+    WRITE master.csv, each event participant CSV, summary.txt, and error_log.txt
+    RETURN the master list and diagnostics
+END ALGORITHM

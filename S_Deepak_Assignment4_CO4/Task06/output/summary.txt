@@ -1,0 +1,8 @@
+Unique registrations: 5
+Duplicate registrations: 1
+Invalid or damaged records: 2
+Missing or unreadable files: 1
+Drama: 3 participant(s)
+Music: 2 participant(s)
+Quiz: 2 participant(s)
+Robotics: 1 participant(s)

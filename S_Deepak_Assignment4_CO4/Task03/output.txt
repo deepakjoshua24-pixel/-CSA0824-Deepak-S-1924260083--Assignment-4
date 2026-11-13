@@ -1,0 +1,9 @@
+COMPLETED SUPPLIED TODO PROGRAM
+(1, 1, [(3, 'expected 3 fields, found 2'), (4, "invalid status 'L'")])
+MISSING FILE CHECK
+(0, 0, [(0, 'missing file: FileNotFoundError')])
+
+BROAD-EXCEPTION MISUSE EXPERIMENT
+With except Exception: pass, deliberate NameError is swallowed.
+Program continues and returns a misleading count: 0
+The record is omitted with no error log, so the defect is hidden from the user.

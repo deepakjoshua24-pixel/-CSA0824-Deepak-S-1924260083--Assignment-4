@@ -1,0 +1,2 @@
+2026-10-03.csv:4: expected 3 fields, found 2
+2026-10-04.csv:4: invalid status 'L'

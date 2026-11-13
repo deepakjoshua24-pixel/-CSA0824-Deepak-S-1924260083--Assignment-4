@@ -1,0 +1,12 @@
+FAULTY VERSION: three-day evidence
+After 3 days, log: 'BK-31BK-32'
+Write failure escapes handler: PermissionError; no error message was saved.
+
+REPAIRED VERSION
+day1.txt: saved
+day2.txt: saved
+day3.txt: saved
+day4_missing.txt: failed and logged
+Repaired log: 'BK-11\nBK-12\nBK-21\nBK-31\nBK-32\n'
+Error log: day4_missing.txt: FileNotFoundError: No such file or directory
+Prevention: use append mode for history; write one newline-terminated record per book; use with; catch and log OSError.

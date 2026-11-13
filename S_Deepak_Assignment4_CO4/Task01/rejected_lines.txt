@@ -1,0 +1,2 @@
+line 3: expected 3 fields, found 2 | damaged,row
+line 4: amount must be a non-negative number | 192311003,Charan,not-a-number

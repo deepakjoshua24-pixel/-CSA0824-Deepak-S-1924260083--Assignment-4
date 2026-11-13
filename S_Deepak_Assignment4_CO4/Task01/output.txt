@@ -1,0 +1,17 @@
+DESIGN DEFECTS
+1. Hard-coded file path: The program only works on one computer and one folder.
+2. No with statement: An error can leave the file open and its data unflushed.
+3. Whole-file read: A large file is copied into memory even though rows are processed one at a time.
+4. Bare except with pass: Malformed rows disappear without an explanation or record.
+5. int amount conversion: Valid currency such as 1250.50 raises ValueError.
+6. Repeated string concatenation: Building a long report repeatedly copies growing prefixes.
+7. Blank final line: A trailing newline can be mistaken for a malformed student record.
+8. No rejected-row log: The office cannot correct or audit records that were skipped.
+
+REPAIRED SCRIPT
+Students totalled: 2
+192311001 | Anita | 1500.75
+192311002 | Bala | 875.00
+Rejected rows: 2
+Rejected-row details: rejected_lines.txt
+Safety: uses a parameter, with, streaming, Decimal, specific validation, and list + join.

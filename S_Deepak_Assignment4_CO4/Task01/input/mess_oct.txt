@@ -1,0 +1,6 @@
+192311001,Anita,1250.50
+192311002,Bala,875
+damaged,row
+192311003,Charan,not-a-number
+
+192311001,Anita,250.25

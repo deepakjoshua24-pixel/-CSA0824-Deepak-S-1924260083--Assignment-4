@@ -1,0 +1,8 @@
+single_script: 192311001: 25.0% | 192311002: 50.0% | 192311003: 25.0% | Absent 3 consecutive days: 192311001
+one_module: 192311001: 25.0% | 192311002: 50.0% | 192311003: 25.0% | Absent 3 consecutive days: 192311001
+three_modules: 192311001: 25.0% | 192311002: 50.0% | 192311003: 25.0% | Absent 3 consecutive days: 192311001
+package: 192311001: 25.0% | 192311002: 50.0% | 192311003: 25.0% | Absent 3 consecutive days: 192311001
+All four results identical: True
+Requirement-change estimate (implementation files touched): single=1; one-module=2; three-modules=2 (stats + main output); package=2 (stats + main output).
+Import forms: import attendance.stats; from attendance import stats; from attendance.stats import summarize.
+Module objects are cached once in sys.modules, so importing a used package does not repeatedly load it per function call.
